@@ -148,7 +148,7 @@ const path = require('path');
       <div class="row">
         <div class="label">Дизайн, премиальная отделка, мебель</div>
         <div class="row-dots"></div>
-        <div class="value">25.00M ₽</div>
+        <div class="value">75.00M ₽</div>
       </div>
       <div class="row">
         <div class="label">Лицензирование и фонд развития</div>
@@ -163,7 +163,7 @@ const path = require('path');
       
       <div class="total-row">
         <div>ИТОГОВЫЙ БЮДЖЕТ ЗАПУСКА</div>
-        <div>52.00M ₽</div>
+        <div>102.00M ₽</div>
       </div>
       
       <div class="divider" style="margin: 40px 0;"></div>
