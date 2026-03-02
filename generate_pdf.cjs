@@ -171,29 +171,29 @@ const path = require('path');
       <h2>II. Прогноз оборота (MRR)</h2>
       
       <div class="row">
-        <div class="label">Членские взносы (100 резидентов х 50k)</div>
+        <div class="label">Членские взносы (10 резидентов х 50k)</div>
         <div class="row-dots"></div>
-        <div class="value">5.00M ₽</div>
+        <div class="value">0.50M ₽</div>
       </div>
       <div class="row">
-        <div class="label">Разовые посещения (300 гостей x 3k)</div>
+        <div class="label">Разовые посещения (30 гостей x 3k)</div>
         <div class="row-dots"></div>
-        <div class="value">0.90M ₽</div>
+        <div class="value">0.09M ₽</div>
       </div>
       <div class="row">
         <div class="label">Реализация сигар и премиум-алкоголя</div>
         <div class="row-dots"></div>
-        <div class="value">7.50M ₽</div>
+        <div class="value">0.75M ₽</div>
       </div>
       
       <div class="total-row">
         <div>ЦЕЛЕВОЙ ЕЖЕМЕСЯЧНЫЙ ОБОРОТ</div>
-        <div>13.40M ₽</div>
+        <div>1.34M ₽</div>
       </div>
       
       <div class="footer">
         Аналитика основана на консервативном прогнозе загруженности.<br>
-        Ожидаемая рентабельность — 35% годовых. Период возврата инвестиций: 34-38 месяцев.
+        Ожидаемая рентабельность — ~15% годовых. Период возврата инвестиций: 80-90 месяцев.
       </div>
     </div>
   </body>

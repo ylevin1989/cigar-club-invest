@@ -5,7 +5,7 @@ import Modal from '../ui/Modal';
 
 const counters = [
   { label: 'Ниша', value: 'Премиум-досуг' },
-  { label: 'Оборот', value: '13.4М руб/мес' },
+  { label: 'Оборот', value: '1.34М руб/мес' },
   { label: 'Аудитория', value: 'Деловая элита' },
 ];
 
@@ -42,7 +42,7 @@ export default function InvestHero() {
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
               Сигарный клуб закрытого типа. <br />
-              <span className="italic font-light text-gradient-gold">Оборот 13.4М руб/мес</span>
+              <span className="italic font-light text-gradient-gold">Оборот 1.34М руб/мес</span>
               <button 
                 onClick={() => setIsModalOpen(true)}
                 className="inline-flex items-center justify-center ml-4 align-middle text-brand-gold/70 hover:text-brand-gold transition-colors bg-brand-gold/10 rounded-full p-2"
@@ -107,7 +107,7 @@ export default function InvestHero() {
         title="Прогноз ежемесячной выручки"
       >
         <p className="text-brand-light mb-4 text-lg">
-          Целевой оборот клуба составляет <span className="text-brand-gold font-serif">13 400 000 руб.</span> в месяц при консервативной загрузке.
+          Целевой оборот клуба составляет <span className="text-brand-gold font-serif">1 340 000 руб.</span> в месяц при консервативной загрузке.
         </p>
         <p className="mb-4">
           Структура доходности строится на трех ключевых направлениях, обеспечивающих финансовую стабильность:
@@ -115,20 +115,20 @@ export default function InvestHero() {
         <ul className="list-disc pl-5 space-y-3 mt-4 text-brand-muted/90">
           <li>
             <strong className="text-brand-light font-normal text-base">Членские взносы:</strong><br />
-            <span className="text-brand-gold font-mono text-sm tracking-widest">5 000 000 руб.</span> (100 резидентов × 50 000 руб.) — гарантия покрытия базовых расходов.
+            <span className="text-brand-gold font-mono text-sm tracking-widest">500 000 руб.</span> (10 резидентов × 50 000 руб.) — гарантия покрытия базовых расходов.
           </li>
           <li>
             <strong className="text-brand-light font-normal text-base">Разовые посещения:</strong><br />
-            <span className="text-brand-gold font-mono text-sm tracking-widest">900 000 руб.</span> (300 гостей × 3 000 руб.) — управляемый трафик для поддержания клубной атмосферы.
+            <span className="text-brand-gold font-mono text-sm tracking-widest">90 000 руб.</span> (30 гостей × 3 000 руб.) — управляемый трафик для поддержания клубной атмосферы.
           </li>
           <li>
             <strong className="text-brand-light font-normal text-base">Реализация сигар и напитков:</strong><br />
-            <span className="text-brand-gold font-mono text-sm tracking-widest">7 500 000 руб.</span> — высокомаржинальный сегмент (алкоголь 70-80%, сигары 100-300%).
+            <span className="text-brand-gold font-mono text-sm tracking-widest">750 000 руб.</span> — высокомаржинальный сегмент (алкоголь 70-80%, сигары 100-300%).
           </li>
         </ul>
         <div className="mt-8 p-4 bg-brand-gold/5 border border-brand-gold/20 flex justify-between items-center">
           <span className="uppercase tracking-[0.2em] text-xs font-medium text-brand-muted">Итого прогноз:</span>
-          <span className="font-serif text-2xl text-brand-gold">13 400 000 руб.</span>
+          <span className="font-serif text-2xl text-brand-gold">1 340 000 руб.</span>
         </div>
       </Modal>
     </>
