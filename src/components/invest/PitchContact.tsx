@@ -12,78 +12,40 @@ export default function PitchContact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="md:col-span-2 text-center max-w-3xl mx-auto"
           >
             <h2 className="text-3xl md:text-5xl font-serif text-brand-light mb-6">
-              Открытие <span className="italic font-light text-brand-gold">нового пула</span>
+              Стратегические партнёры <span className="italic font-light text-brand-gold">найдены</span>
             </h2>
-            <div className="space-y-6 text-brand-muted font-light leading-relaxed">
-              <p>
-                Мы формируем пул стратегических партнеров для запуска новой, полностью легальной и премиальной площадки в центре деловой активности. Наш формат уже доказал свою состоятельность, мы понимаем профиль гостя, знаем, как обеспечить стабильный поток UHNWI клиентов и как удерживать их интерес годами.
+            <div className="space-y-6 text-brand-muted font-light leading-relaxed mb-12">
+              <p className="text-xl text-brand-light/90 font-medium">
+                Наша бизнес-модель закрытого сигарного клуба показала свою высочайшую эффективность. Пул ключевых инвесторов для запуска новой премиальной площадки уже сформирован.
               </p>
               <p>
-                Мы ищем не просто капитал (смарт-мани), а вовлеченных партнеров, разделяющих наши ценности безупречного сервиса и эксклюзивности. Инвестиции направляются на капитальное строительство сложной инженерной вентиляции, оснащение профессиональной комнаты-хьюмидора и получение полного пакета лицензий (алкоголь, табак, общепит).
+                Мы знаем, как обеспечить стабильный поток аудитории Деловой элиты, и умеем удерживать их интерес годами. Инвестиции направлены на создание безупречного приватного пространства: капитальное строительство прецизионной вентиляции, возведение профессиональной комнаты-хьюмидора и оформление всех необходимых лицензий.
               </p>
-              <p>
-                Оставьте заявку ниже. В ответ мы свяжемся с вами лично для обсуждения деталей, направим подробный дашборд с юнит-экономикой, детализированную смету капитальных затрат (CAPEX) плана-графика открытия и драфт соглашения о неразглашении (NDA). 
+              <p className="text-brand-gold font-serif">
+                Вы всё ещё можете стать частью этого закрытого бизнеса. Изучите нашу финансовую модель, чтобы принять решение об инвестициях в проект с прогнозируемым оборотом 1.34М руб/мес.
               </p>
             </div>
-          </motion.div>
 
-          {/* Minimalist Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="bg-black/40 p-8 border border-brand-gold/10 backdrop-blur-sm"
-          >
-            <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-              <div className="relative">
-                <input 
-                  type="text" 
-                  id="invest-name" 
-                  autoComplete="off"
-                  className="w-full bg-transparent border-b border-brand-light/20 py-3 text-brand-light placeholder-transparent focus:outline-none focus:border-brand-gold peer transition-colors"
-                  placeholder="Имя"
-                />
-                <label htmlFor="invest-name" className="absolute left-0 -top-3.5 text-xs text-brand-muted/70 uppercase tracking-widest transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-brand-muted peer-placeholder-shown:top-3 peer-placeholder-shown:normal-case peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-gold peer-focus:uppercase peer-focus:tracking-widest cursor-text">
-                  Имя и Фамилия
-                </label>
-              </div>
-
-              <div className="relative">
-                <input 
-                  type="text" 
-                  id="invest-telegram" 
-                  autoComplete="off"
-                  className="w-full bg-transparent border-b border-brand-light/20 py-3 text-brand-light placeholder-transparent focus:outline-none focus:border-brand-gold peer transition-colors"
-                  placeholder="Telegram"
-                />
-                <label htmlFor="invest-telegram" className="absolute left-0 -top-3.5 text-xs text-brand-muted/70 uppercase tracking-widest transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-brand-muted peer-placeholder-shown:top-3 peer-placeholder-shown:normal-case peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-gold peer-focus:uppercase peer-focus:tracking-widest cursor-text">
-                  Ник в Telegram или Телефон
-                </label>
-              </div>
-
-              <div className="relative">
-                <input 
-                  type="text" 
-                  id="invest-company" 
-                  autoComplete="off"
-                  className="w-full bg-transparent border-b border-brand-light/20 py-3 text-brand-light placeholder-transparent focus:outline-none focus:border-brand-gold peer transition-colors"
-                  placeholder="Компания"
-                />
-                <label htmlFor="invest-company" className="absolute left-0 -top-3.5 text-xs text-brand-muted/70 uppercase tracking-widest transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-brand-muted peer-placeholder-shown:top-3 peer-placeholder-shown:normal-case peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-gold peer-focus:uppercase peer-focus:tracking-widest cursor-text">
-                  Компания или сфера интересов (опционально)
-                </label>
-              </div>
-
-              <button 
-                type="submit"
-                className="w-full py-5 px-6 bg-brand-gold text-brand-bg border border-brand-gold uppercase tracking-[0.2em] text-sm hover:bg-transparent hover:text-brand-gold transition-colors mt-8 font-medium"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <a 
+                href="/financial_model.pdf" 
+                download
+                className="inline-flex items-center justify-center py-5 px-10 bg-brand-gold text-brand-bg border border-brand-gold uppercase tracking-[0.2em] text-sm hover:bg-transparent hover:text-brand-gold transition-colors font-medium shadow-[0_0_20px_rgba(198,168,124,0.3)] hover:shadow-[0_0_30px_rgba(198,168,124,0.5)]"
               >
-                Получить NDA и расчеты
-              </button>
-            </form>
+                Скачать Фин. Модель и NDA
+              </a>
+              <p className="mt-4 text-xs text-brand-muted/50 uppercase tracking-widest font-mono">
+                PDF, ~150 KB
+              </p>
+            </motion.div>
           </motion.div>
 
         </div>
