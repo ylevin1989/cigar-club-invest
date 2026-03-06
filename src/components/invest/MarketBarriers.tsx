@@ -83,10 +83,10 @@ export default function MarketBarriers() {
           >
             <p className="text-brand-gold text-sm uppercase tracking-[0.2em] mb-4 flex items-center gap-4">
               <span className="w-8 h-px bg-brand-gold/50"></span>
-              Анализ рынка
+              Эксклюзивность
             </p>
             <h2 className="text-3xl md:text-5xl font-serif text-brand-light">
-              Почему эта ниша <span className="italic font-light text-brand-gold">защищена от конкуренции?</span>
+              Преимущества <span className="italic font-light text-brand-gold">закрытого формата</span>
             </h2>
           </motion.div>
           

@@ -1,17 +1,6 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Info } from 'lucide-react';
-import Modal from '../ui/Modal';
-
-const counters = [
-  { label: 'Ниша', value: 'Премиум-досуг' },
-  { label: 'Оборот', value: '1.34М руб/мес' },
-  { label: 'Аудитория', value: 'Деловая элита' },
-];
 
 export default function InvestHero() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <>
       <section className="relative min-h-screen w-full flex flex-col items-center justify-center px-6 pt-32 pb-24 bg-brand-bg border-b border-brand-gold/10">
@@ -21,116 +10,54 @@ export default function InvestHero() {
         {/* Grid lines background for "terminal" feel */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8C857B10_1px,transparent_1px),linear-gradient(to_bottom,#8C857B10_1px,transparent_1px)] bg-[size:4rem_4rem] z-0 pointer-events-none opacity-20 hidden md:block"></div>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center mt-12 md:mt-0">
+        <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center text-center mt-12 md:mt-0">
           
-          {/* Left Column: Copy & CTA */}
-          <div className="lg:col-span-8 flex flex-col items-start text-left">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <span className="inline-block py-1 px-3 border border-brand-gold/30 text-brand-gold text-xs uppercase tracking-widest mb-6 bg-brand-gold/5">
-                Инвестиционный меморандум
-              </span>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <span className="inline-block py-1 px-3 border border-brand-gold/30 text-brand-gold text-xs uppercase tracking-widest mb-6 bg-brand-gold/5">
+              Концепция закрытого клуба
+            </span>
+          </motion.div>
 
-            <motion.h1 
-              className="text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.1] text-brand-light mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            >
-              Сигарный клуб закрытого типа. <br />
-              <span className="italic font-light text-gradient-gold">Оборот 1.34М руб/мес</span>
-              <button 
-                onClick={() => setIsModalOpen(true)}
-                className="inline-flex items-center justify-center ml-4 align-middle text-brand-gold/70 hover:text-brand-gold transition-colors bg-brand-gold/10 rounded-full p-2"
-                aria-label="Подробнее о доходности"
-              >
-                <Info size={24} />
-              </button>
-            </motion.h1>
+          <motion.h1 
+            className="text-5xl md:text-6xl lg:text-8xl font-serif leading-[1.1] text-brand-light mb-8 max-w-4xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          >
+            Эстетика сигарной <br />
+            <span className="italic font-light text-gradient-gold">культуры и отдыха</span>
+          </motion.h1>
 
-            <motion.div 
-              className="text-lg md:text-xl text-brand-muted max-w-3xl font-light tracking-wide leading-relaxed mb-4 space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <p>
-                Современная интерпретация классического британского клуба, где маржинальность строится не просто на продаже сигар, а на высоком проценте возвратности и дополнительных сервисах.
-              </p>
-              <p className="text-base text-brand-muted/80">
-                Традиционный бизнес с прозрачной юнит-экономикой. Высокий барьер входа обеспечивает защиту от массовой конкуренции и стабильный приток элитной аудитории (Ultra High-Net-Worth Individuals). Мы открываем предварительный прием заявок на стратегическое партнерство для запуска нового объекта.
-              </p>
-            </motion.div>
+          <motion.div 
+            className="text-lg md:text-xl text-brand-muted max-w-3xl font-light tracking-wide leading-relaxed mb-4 space-y-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <p>
+              Современная интерпретация классического британского клуба, где каждая деталь подчинена одной цели — созданию безупречной атмосферы для ценителей.
+            </p>
+            <p className="text-base text-brand-muted/80">
+              Мы создаем пространство, где время замедляется, а качество сервиса и приватность становятся фундаментом вашего досуга. Место, где встречаются традиции и современный комфорт, формируя сообщество единомышленников.
+            </p>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-8"
-            >
-              <a href="#invest-contact" className="group relative inline-flex items-center justify-center px-10 py-5 text-sm uppercase tracking-[0.2em] transition-all text-brand-gold bg-transparent border border-brand-gold hover:bg-brand-gold hover:text-brand-bg">
-                <span className="relative z-10 font-medium">Запросить фин. модель</span>
-              </a>
-            </motion.div>
-          </div>
-
-          {/* Right Column: "Terminal" Metrics */}
-          <div className="lg:col-span-4 flex flex-col gap-6">
-            {counters.map((item, i) => (
-              <motion.div 
-                key={i}
-                className="p-6 border border-brand-gold/20 bg-black/40 backdrop-blur-md relative overflow-hidden group"
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 + (i * 0.15), ease: [0.16, 1, 0.3, 1] }}
-              >
-                {/* Animated scanning line effect */}
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-brand-gold/60 group-hover:bg-brand-gold group-hover:shadow-[0_0_15px_rgba(198,168,124,0.5)] transition-all duration-300"></div>
-                
-                <div className="pl-5">
-                  <p className="text-xs uppercase tracking-[0.2em] text-brand-muted/70 mb-2 font-mono">[{item.label}]</p>
-                  <p className="text-2xl md:text-3xl font-serif text-brand-gold">{item.value}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-12"
+          >
+            <a href="#concept-details" className="group relative inline-flex items-center justify-center px-10 py-5 text-sm uppercase tracking-[0.2em] transition-all text-brand-gold bg-transparent border border-brand-gold hover:bg-brand-gold hover:text-brand-bg">
+              <span className="relative z-10 font-medium">Узнать детали</span>
+            </a>
+          </motion.div>
         </div>
       </section>
-
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title="Прогноз ежемесячной выручки"
-      >
-        <p className="text-brand-light mb-4 text-lg">
-          Целевой оборот клуба составляет <span className="text-brand-gold font-serif">1 340 000 руб.</span> в месяц при консервативной загрузке.
-        </p>
-        <p className="mb-4">
-          Структура доходности строится на трех ключевых направлениях, обеспечивающих финансовую стабильность:
-        </p>
-        <ul className="list-disc pl-5 space-y-3 mt-4 text-brand-muted/90">
-          <li>
-            <strong className="text-brand-light font-normal text-base">Членские взносы:</strong><br />
-            <span className="text-brand-gold font-mono text-sm tracking-widest">500 000 руб.</span> (10 резидентов × 50 000 руб.) — гарантия покрытия базовых расходов.
-          </li>
-          <li>
-            <strong className="text-brand-light font-normal text-base">Разовые посещения:</strong><br />
-            <span className="text-brand-gold font-mono text-sm tracking-widest">90 000 руб.</span> (30 гостей × 3 000 руб.) — управляемый трафик для поддержания клубной атмосферы.
-          </li>
-          <li>
-            <strong className="text-brand-light font-normal text-base">Реализация сигар и напитков:</strong><br />
-            <span className="text-brand-gold font-mono text-sm tracking-widest">750 000 руб.</span> — высокомаржинальный сегмент (алкоголь 70-80%, сигары 100-300%).
-          </li>
-        </ul>
-        <div className="mt-8 p-4 bg-brand-gold/5 border border-brand-gold/20 flex justify-between items-center">
-          <span className="uppercase tracking-[0.2em] text-xs font-medium text-brand-muted">Итого прогноз:</span>
-          <span className="font-serif text-2xl text-brand-gold">1 340 000 руб.</span>
-        </div>
-      </Modal>
     </>
   );
 }
