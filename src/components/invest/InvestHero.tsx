@@ -46,16 +46,6 @@ export default function InvestHero() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-12"
-          >
-            <a href="#concept-details" className="group relative inline-flex items-center justify-center px-10 py-5 text-sm uppercase tracking-[0.2em] transition-all text-brand-gold bg-transparent border border-brand-gold hover:bg-brand-gold hover:text-brand-bg">
-              <span className="relative z-10 font-medium">Узнать детали</span>
-            </a>
-          </motion.div>
         </div>
       </section>
     </>

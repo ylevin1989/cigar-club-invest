@@ -24,24 +24,7 @@ export default function PitchContact() {
               <p>
                 Высокий барьер входа, прямые контракты на поставку редких сигар и статусное окружение гарантируют исключительный уровень клуба. Основной фокус направлен на создание идеальной атмосферы: от прецизионной вентиляции до профессиональной комнаты-хьюмидора.
               </p>
-              <p className="text-brand-gold font-serif text-xl">
-                Свяжитесь с нами, чтобы узнать больше о жизни клуба и условиях членства.
-              </p>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <a 
-                href="/contact" 
-                className="inline-flex items-center justify-center py-5 px-10 bg-brand-gold text-brand-bg border border-brand-gold uppercase tracking-[0.2em] text-sm hover:bg-transparent hover:text-brand-gold transition-colors font-medium shadow-[0_0_20px_rgba(198,168,124,0.3)] hover:shadow-[0_0_30px_rgba(198,168,124,0.5)]"
-              >
-                Связаться с нами
-              </a>
-            </motion.div>
           </motion.div>
 
         </div>
