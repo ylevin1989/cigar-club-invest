@@ -13,7 +13,7 @@ services:
       - traefik.http.routers.invest-site.rule=Host(`invest.uno-ai.pw`)
       - traefik.http.routers.invest-site.entrypoints=websecure
       - traefik.http.routers.invest-site.tls=true
-      - traefik.http.routers.invest-site.tls.certresolver=letsencrypt
+      - traefik.http.routers.invest-site.tls.certresolver=mytlschallenge
       - traefik.http.services.invest-site.loadbalancer.server.port=80
 
 networks:
