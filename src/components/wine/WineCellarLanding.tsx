@@ -366,76 +366,85 @@ export default function WineCellarLanding() {
         </div>
       </section>
 
-      <section className="bg-brand-bg px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <motion.div {...reveal()} className="max-w-xl">
+      <section className="bg-brand-bg px-6 pb-10 pt-24 md:px-10 md:pb-12 md:pt-32">
+        <div className="mx-auto max-w-6xl">
+          <motion.div
+            {...reveal()}
+            className="border border-white/10 bg-[linear-gradient(180deg,rgba(20,16,17,0.88),rgba(8,8,10,0.96))] p-8 md:p-12"
+          >
             <p className="mb-5 flex items-center gap-4 text-sm uppercase tracking-[0.28em] text-brand-gold">
               <span className="h-px w-10 bg-brand-gold/60" />
               Финансовая модель
             </p>
-            <h2 className="text-4xl leading-tight text-brand-light md:text-6xl">
+            <h2 className="max-w-4xl text-4xl leading-tight text-brand-light md:text-6xl">
               Экономика
               <span className="block italic font-light text-brand-gold">премиального винного погреба</span>
             </h2>
-            <p className="mt-7 text-base leading-relaxed text-brand-muted md:text-lg">
+            <p className="mt-8 max-w-3xl text-base leading-relaxed text-brand-muted md:text-lg">
               Страница работает как investor-facing presentation, поэтому вместо формы здесь собрана
               операционная и финансовая логика проекта на горизонте первых 12 месяцев.
             </p>
           </motion.div>
+        </div>
+      </section>
 
-          <motion.div
-            {...reveal(1)}
-            className="grid gap-6 border border-white/10 bg-black/20 p-7 md:grid-cols-2 md:p-10"
-          >
-            <div className="border border-white/10 bg-white/[0.02] p-6">
-              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Ежемесячные расходы</p>
-              <p className="mt-4 text-4xl text-brand-light">420 000 ₽</p>
-              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
-                Операционные расходы проекта на уровне mature mode: команда, сервис, аренда, хранение,
-                логистика, климатический контур и сопровождение частных визитов.
-              </p>
-            </div>
-            <div className="border border-white/10 bg-white/[0.02] p-6">
-              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Средняя выручка</p>
-              <p className="mt-4 text-4xl text-brand-gold">1 100 000 ₽</p>
-              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
-                Прогнозируемый диапазон выручки: 1 000 000–1 200 000 ₽/мес. при стабилизации частного спроса.
-              </p>
-            </div>
-            <div className="border border-white/10 bg-white/[0.02] p-6">
-              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Валовая прибыль</p>
-              <p className="mt-4 text-4xl text-brand-light">700 000 ₽</p>
-              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
-                При себестоимости товара около 400 000 ₽, что составляет примерно 36% от средней выручки.
-              </p>
-            </div>
-            <div className="border border-white/10 bg-white/[0.02] p-6">
-              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Чистая прибыль</p>
-              <p className="mt-4 text-4xl text-brand-gold">280 000 ₽/мес.</p>
-              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
-                Структура модели рассчитана как private-advisory venue с controlled assortment и высокой маржой доверия.
-              </p>
-            </div>
-            <div className="border border-white/10 bg-white/[0.02] p-6 md:col-span-2">
-              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Структура доходов</p>
-              <div className="mt-5 grid gap-4 md:grid-cols-2">
-                {revenueLines.map((line) => (
-                  <div key={line.label} className="border border-white/8 bg-black/20 p-4">
-                    <p className="text-sm text-brand-light">{line.label}</p>
-                    <p className="mt-2 text-xl text-brand-gold">{line.range}</p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.22em] text-brand-muted">{line.share} от выручки</p>
-                  </div>
-                ))}
+      <section className="bg-brand-bg px-6 pb-24 md:px-10 md:pb-32">
+        <div className="mx-auto max-w-6xl">
+          <motion.div {...reveal(1)} className="grid gap-6">
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              <div className="border border-white/10 bg-white/[0.02] p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Ежемесячные расходы</p>
+                <p className="mt-4 text-4xl text-brand-light">420 000 ₽</p>
+                <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+                  Операционные расходы проекта на уровне mature mode: команда, сервис, аренда, хранение,
+                  логистика, климатический контур и сопровождение частных визитов.
+                </p>
+              </div>
+              <div className="border border-white/10 bg-white/[0.02] p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Средняя выручка</p>
+                <p className="mt-4 text-4xl text-brand-gold">1 100 000 ₽</p>
+                <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+                  Прогнозируемый диапазон выручки: 1 000 000–1 200 000 ₽/мес. при стабилизации частного спроса.
+                </p>
+              </div>
+              <div className="border border-white/10 bg-white/[0.02] p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Валовая прибыль</p>
+                <p className="mt-4 text-4xl text-brand-light">700 000 ₽</p>
+                <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+                  При себестоимости товара около 400 000 ₽, что составляет примерно 36% от средней выручки.
+                </p>
+              </div>
+              <div className="border border-white/10 bg-white/[0.02] p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Чистая прибыль</p>
+                <p className="mt-4 text-4xl text-brand-gold">280 000 ₽/мес.</p>
+                <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+                  Структура модели рассчитана как private-advisory venue с controlled assortment и высокой маржой доверия.
+                </p>
               </div>
             </div>
-            <div className="border border-white/10 bg-white/[0.02] p-6 md:col-span-2">
-              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Финансовый прогноз на 12 месяцев</p>
-              <div className="mt-5 grid gap-4">
-                {yearlyForecast.map((item) => (
-                  <div key={item} className="border-l border-brand-gold/40 pl-4 text-sm leading-relaxed text-brand-light/86">
-                    {item}
-                  </div>
-                ))}
+
+            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+              <div className="border border-white/10 bg-white/[0.02] p-6 md:p-8">
+                <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Структура доходов</p>
+                <div className="mt-5 grid gap-4 md:grid-cols-2">
+                  {revenueLines.map((line) => (
+                    <div key={line.label} className="border border-white/8 bg-black/20 p-4">
+                      <p className="text-sm text-brand-light">{line.label}</p>
+                      <p className="mt-2 text-xl text-brand-gold">{line.range}</p>
+                      <p className="mt-1 text-xs uppercase tracking-[0.22em] text-brand-muted">{line.share} от выручки</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="border border-white/10 bg-white/[0.02] p-6 md:p-8">
+                <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Финансовый прогноз на 12 месяцев</p>
+                <div className="mt-5 grid gap-4">
+                  {yearlyForecast.map((item) => (
+                    <div key={item} className="border-l border-brand-gold/40 pl-4 text-sm leading-relaxed text-brand-light/86">
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
