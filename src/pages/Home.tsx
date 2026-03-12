@@ -1,19 +1,5 @@
-import Hero from '../components/Hero'
-import Trust from '../components/Trust'
-import Services from '../components/Services'
-import Team from '../components/Team'
-import Testimonials from '../components/Testimonials'
-import BookingForm from '../components/BookingForm'
+import UnoLanding from '../components/home/UnoLanding'
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <Trust />
-      <Services />
-      <Team />
-      <Testimonials />
-      <BookingForm />
-    </>
-  )
+  return <UnoLanding />
 }
