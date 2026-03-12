@@ -337,15 +337,15 @@ export default function UnoLanding() {
           <motion.div {...reveal()} className="max-w-xl">
             <p className="mb-5 flex items-center gap-4 text-sm uppercase tracking-[0.28em] text-brand-gold">
               <span className="h-px w-10 bg-brand-gold/60" />
-              Презентация проекта
+              Инвестиционная рамка
             </p>
             <h2 className="text-4xl leading-tight text-brand-light md:text-6xl">
-              Получить материалы
-              <span className="block italic font-light text-brand-gold">по UNO</span>
+              UNO как
+              <span className="block italic font-light text-brand-gold">платформа премиальных сценариев</span>
             </h2>
             <p className="mt-7 text-base leading-relaxed text-brand-muted md:text-lg">
-              Оставьте контакт, и мы направим презентацию проекта, чтобы обсудить формат резидентства, приватные
-              сценарии отдыха и возможности участия.
+              Проект объединяет исторический статус адреса, частный формат посещения и потенциал масштабирования
+              нескольких premium-verticals внутри одной узнаваемой оболочки.
             </p>
 
             <div className="mt-10 space-y-5 text-sm text-brand-light/80 md:text-base">
@@ -354,62 +354,39 @@ export default function UnoLanding() {
                 <p>Санкт-Петербург, Английская набережная, 70</p>
               </div>
               <div className="border-l border-white/10 pl-4">
-                <p className="mb-1 uppercase tracking-[0.22em] text-brand-gold">Связь</p>
-                <p>Контакты команды раскрываются после первичного запроса презентации.</p>
+                <p className="mb-1 uppercase tracking-[0.22em] text-brand-gold">Формат</p>
+                <p>Закрытая презентационная экосистема для already-known investors.</p>
               </div>
             </div>
           </motion.div>
 
-          <motion.form
+          <motion.div
             {...reveal(1)}
             className="grid gap-6 border border-white/10 bg-black/20 p-7 md:grid-cols-2 md:p-10"
-            onSubmit={(event) => event.preventDefault()}
           >
-            <label className="grid gap-3">
-              <span className="text-xs uppercase tracking-[0.24em] text-brand-gold">Ваше имя</span>
-              <input
-                type="text"
-                placeholder="Имя и фамилия"
-                className="border-b border-white/15 bg-transparent px-0 py-4 text-base text-brand-light outline-none transition-colors placeholder:text-brand-muted focus:border-brand-gold"
-              />
-            </label>
-            <label className="grid gap-3">
-              <span className="text-xs uppercase tracking-[0.24em] text-brand-gold">Контакт</span>
-              <input
-                type="text"
-                placeholder="Телефон или Telegram"
-                className="border-b border-white/15 bg-transparent px-0 py-4 text-base text-brand-light outline-none transition-colors placeholder:text-brand-muted focus:border-brand-gold"
-              />
-            </label>
-            <label className="grid gap-3 md:col-span-2">
-              <span className="text-xs uppercase tracking-[0.24em] text-brand-gold">Email</span>
-              <input
-                type="email"
-                placeholder="name@example.com"
-                className="border-b border-white/15 bg-transparent px-0 py-4 text-base text-brand-light outline-none transition-colors placeholder:text-brand-muted focus:border-brand-gold"
-              />
-            </label>
-            <label className="grid gap-3 md:col-span-2">
-              <span className="text-xs uppercase tracking-[0.24em] text-brand-gold">Комментарий</span>
-              <textarea
-                rows={5}
-                placeholder="Расскажите, какой формат участия или досуга вам интересен"
-                className="resize-none border border-white/10 bg-white/[0.02] px-4 py-4 text-base text-brand-light outline-none transition-colors placeholder:text-brand-muted focus:border-brand-gold"
-              />
-            </label>
-            <div className="md:col-span-2 flex flex-col gap-5 pt-4">
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-3 bg-brand-gold px-7 py-4 text-sm uppercase tracking-[0.24em] text-brand-bg transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                Отправить запрос
-                <ArrowRight size={16} />
-              </button>
-              <p className="text-xs leading-relaxed text-brand-muted">
-                Нажимая кнопку, вы отправляете запрос на получение презентации и дальнейший приватный контакт с командой проекта.
+            <div className="border border-white/10 bg-white/[0.02] p-6">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Value Layer 01</p>
+              <p className="mt-4 text-2xl text-brand-light">Исторический адрес</p>
+              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+                Парадная архитектура, редкая точка входа в символический capital of place и высокий порог репутационного входа.
               </p>
             </div>
-          </motion.form>
+            <div className="border border-white/10 bg-white/[0.02] p-6">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Value Layer 02</p>
+              <p className="mt-4 text-2xl text-brand-light">Private-use model</p>
+              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+                Каждый продукт внутри особняка работает не как mass service, а как curated private environment.
+              </p>
+            </div>
+            <div className="border border-white/10 bg-white/[0.02] p-6 md:col-span-2">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Investment Thesis</p>
+              <p className="mt-4 text-base leading-relaxed text-brand-light/86 md:text-lg">
+                UNO — это не одна функция, а оболочка для нескольких премиальных направлений: mansion experience,
+                cigar club, bathhouse concept и wine cellar. Такая архитектура повышает гибкость monetization,
+                усиливает редкость бренда и делает проект убедительным для долгого инвестиционного горизонта.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>

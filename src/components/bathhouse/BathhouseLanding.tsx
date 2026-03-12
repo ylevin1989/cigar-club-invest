@@ -322,56 +322,32 @@ export default function BathhouseLanding() {
             </div>
           </motion.div>
 
-          <motion.form
+          <motion.div
             {...reveal(1)}
             className="grid gap-6 border border-white/10 bg-black/20 p-7 md:grid-cols-2 md:p-10"
-            onSubmit={(event) => event.preventDefault()}
           >
-            <label className="grid gap-3">
-              <span className="text-xs uppercase tracking-[0.24em] text-brand-gold">Имя</span>
-              <input
-                type="text"
-                placeholder="Ваше имя"
-                className="border-b border-white/15 bg-transparent px-0 py-4 text-base text-brand-light outline-none transition-colors placeholder:text-brand-muted focus:border-brand-gold"
-              />
-            </label>
-            <label className="grid gap-3">
-              <span className="text-xs uppercase tracking-[0.24em] text-brand-gold">Контакт</span>
-              <input
-                type="text"
-                placeholder="Телефон или Telegram"
-                className="border-b border-white/15 bg-transparent px-0 py-4 text-base text-brand-light outline-none transition-colors placeholder:text-brand-muted focus:border-brand-gold"
-              />
-            </label>
-            <label className="grid gap-3 md:col-span-2">
-              <span className="text-xs uppercase tracking-[0.24em] text-brand-gold">Email</span>
-              <input
-                type="email"
-                placeholder="name@example.com"
-                className="border-b border-white/15 bg-transparent px-0 py-4 text-base text-brand-light outline-none transition-colors placeholder:text-brand-muted focus:border-brand-gold"
-              />
-            </label>
-            <label className="grid gap-3 md:col-span-2">
-              <span className="text-xs uppercase tracking-[0.24em] text-brand-gold">Комментарий</span>
-              <textarea
-                rows={5}
-                placeholder="Опишите интерес к проекту или запрос на стратегическую презентацию"
-                className="resize-none border border-white/10 bg-white/[0.02] px-4 py-4 text-base text-brand-light outline-none transition-colors placeholder:text-brand-muted focus:border-brand-gold"
-              />
-            </label>
-            <div className="md:col-span-2 flex flex-col gap-5 pt-4">
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-3 bg-brand-gold px-7 py-4 text-sm uppercase tracking-[0.24em] text-brand-bg transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                Запросить презентацию
-                <ChevronRight size={16} />
-              </button>
-              <p className="text-xs leading-relaxed text-brand-muted">
-                Концепт-презентация предназначена для стратегических партнеров и private audience.
+            <div className="border border-white/10 bg-white/[0.02] p-6">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Scaling Logic</p>
+              <p className="mt-4 text-2xl text-brand-light">Стандартизируемый протокол</p>
+              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+                Регламенты сервиса, стерильности и приватности описываются как repeatable operating model.
               </p>
             </div>
-          </motion.form>
+            <div className="border border-white/10 bg-white/[0.02] p-6">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Premium Defensibility</p>
+              <p className="mt-4 text-2xl text-brand-light">Высокий входной порог</p>
+              <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+                Инженерная сложность и privacy-first инфраструктура создают для конкурентов барьер копирования.
+              </p>
+            </div>
+            <div className="border border-white/10 bg-white/[0.02] p-6 md:col-span-2">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Investor Note</p>
+              <p className="mt-4 text-base leading-relaxed text-brand-light/86 md:text-lg">
+                Банный хаб рассматривается как high-ticket wellness asset: с низкой ценовой эластичностью,
+                повторяемыми визитами, высоким LTV и возможностью тиражирования в других private-luxury locations.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
