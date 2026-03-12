@@ -64,24 +64,19 @@ const experts = [
   'Марк Д. — инженер климатических систем, спроектировал хранилище с погрешностью температуры не более 0,2°C в год.',
 ]
 
-const quotes = [
-  'Искал Petrus 2010 с подтвержденным трекингом перевозки. Здесь впервые увидел реальные отчеты с термодатчиков от Бордо до Москвы.',
-  'Приватность решает все: закрытый въезд, никого лишнего внутри и только конкретика по моему запросу, без показного снобизма.',
-  'Бутылку с дефектом за 180 тысяч заменили по одному сообщению. Без экспертиз, ожиданий и попыток переложить риск на клиента.',
-]
-
 const revenueLines = [
-  { label: 'Продажа вина в бутылках', range: '500 000–600 000 ₽', share: '30–40%' },
-  { label: 'Бокальное вино', range: '300 000–400 000 ₽', share: '25–30%' },
-  { label: 'Дегустационные сессии', range: '150 000–200 000 ₽', share: '15–20%' },
-  { label: 'Закуски к вину', range: '50 000–100 000 ₽', share: '10–15%' },
+  { label: 'Продажа вина в бутылках', range: '420 000–500 000 ₽', share: '30–35%' },
+  { label: 'Бокальное вино', range: '250 000–320 000 ₽', share: '20–25%' },
+  { label: 'Дегустационные сессии', range: '120 000–180 000 ₽', share: '10–15%' },
+  { label: 'Хранение частных коллекций', range: '180 000–220 000 ₽', share: '15–20%' },
+  { label: 'Закуски к вину', range: '50 000–80 000 ₽', share: '5–10%' },
 ]
 
 const yearlyForecast = [
-  '1–3 месяц: настройка клиентского потока и первичный оборот 800–950 тыс. ₽/мес.',
-  '4–6 месяц: стабилизация посещаемости и выход к средней выручке 1,0–1,1 млн ₽/мес.',
-  '7–9 месяц: усиление клубного ядра, рост доли бокального вина и дегустаций до 1,1–1,2 млн ₽/мес.',
-  '10–12 месяц: закрепление private-advisory модели и годовой run-rate свыше 13 млн ₽.',
+  '1–3 месяц: запуск private-visits и первичный оборот 850–1 000 тыс. ₽/мес.',
+  '4–6 месяц: стабилизация спроса и подключение recurring-дохода от хранения коллекций, выход к 1,05–1,15 млн ₽/мес.',
+  '7–9 месяц: усиление доли частного хранения, бокального вина и дегустаций до 1,15–1,25 млн ₽/мес.',
+  '10–12 месяц: закрепление private-advisory модели и годовой run-rate в диапазоне 13,5–14 млн ₽.',
 ]
 
 function reveal(index = 0) {
@@ -109,12 +104,13 @@ export default function WineCellarLanding() {
               Quiet Luxury Cellar
             </span>
             <h1 className="text-5xl leading-[1.02] text-brand-light md:text-7xl lg:text-[5.8rem]">
-              Приватный винный особняк:
+              Приватный винный погреб
+              <span className="block text-brand-light">в Особняке:</span>
               <span className="mt-3 block italic text-gradient-gold">абсолютная защита подлинности и вашего капитала</span>
             </h1>
             <p className="mt-8 max-w-3xl text-base leading-relaxed text-brand-light/74 md:text-xl">
-              Управляем энологическими рисками HNWI-клиентов: от онлайн-мониторинга термодатчиков в погребе до
-              мгновенного выкупа бутылок с дефектом пробки.
+              Частный контур хранения, селекции и управления винным капиталом в историческом центре Петербурга:
+              от онлайн-мониторинга термодатчиков до безусловной защиты от дефектов и сбоев provenance.
             </p>
             <div className="mt-12 flex flex-col gap-4 sm:flex-row">
               <a
@@ -333,11 +329,11 @@ export default function WineCellarLanding() {
           <motion.div {...reveal()} className="mb-14 max-w-3xl">
             <p className="mb-5 flex items-center gap-4 text-sm uppercase tracking-[0.28em] text-brand-gold">
               <span className="h-px w-10 bg-brand-gold/60" />
-              Экспертиза и доверие
+              Команда и экспертиза
             </p>
             <h2 className="text-4xl leading-tight text-brand-light md:text-6xl">
-              Система,
-              <span className="block italic font-light text-brand-gold">а не витрина</span>
+              Операционный контур,
+              <span className="block italic font-light text-brand-gold">который можно защитить цифрами</span>
             </h2>
           </motion.div>
           <div className="grid gap-6 lg:grid-cols-3">
@@ -350,17 +346,6 @@ export default function WineCellarLanding() {
                 <Activity className="mb-5 text-brand-gold" size={18} strokeWidth={1.5} />
                 <p className="text-sm leading-relaxed text-brand-light/86">{expert}</p>
               </motion.article>
-            ))}
-          </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {quotes.map((quote, index) => (
-              <motion.blockquote
-                key={quote}
-                {...reveal(index)}
-                className="border border-brand-gold/12 bg-black/20 p-6 text-sm leading-relaxed text-brand-muted"
-              >
-                “{quote}”
-              </motion.blockquote>
             ))}
           </div>
         </div>
@@ -402,23 +387,23 @@ export default function WineCellarLanding() {
               </div>
               <div className="border border-white/10 bg-white/[0.02] p-6">
                 <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Средняя выручка</p>
-                <p className="mt-4 text-4xl text-brand-gold">1 100 000 ₽</p>
+                <p className="mt-4 text-4xl text-brand-gold">1 150 000 ₽</p>
                 <p className="mt-3 text-sm leading-relaxed text-brand-muted">
-                  Прогнозируемый диапазон выручки: 1 000 000–1 200 000 ₽/мес. при стабилизации частного спроса.
+                  Обновлённый прогнозируемый диапазон выручки: 1 050 000–1 250 000 ₽/мес. с учётом хранения частных коллекций.
                 </p>
               </div>
               <div className="border border-white/10 bg-white/[0.02] p-6">
                 <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Валовая прибыль</p>
-                <p className="mt-4 text-4xl text-brand-light">700 000 ₽</p>
+                <p className="mt-4 text-4xl text-brand-light">770 000 ₽</p>
                 <p className="mt-3 text-sm leading-relaxed text-brand-muted">
-                  При себестоимости товара около 400 000 ₽, что составляет примерно 36% от средней выручки.
+                  При себестоимости товара около 380 000 ₽, что составляет примерно 33% от средней выручки.
                 </p>
               </div>
               <div className="border border-white/10 bg-white/[0.02] p-6">
                 <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Чистая прибыль</p>
-                <p className="mt-4 text-4xl text-brand-gold">280 000 ₽/мес.</p>
+                <p className="mt-4 text-4xl text-brand-gold">350 000 ₽/мес.</p>
                 <p className="mt-3 text-sm leading-relaxed text-brand-muted">
-                  Структура модели рассчитана как private-advisory venue с controlled assortment и высокой маржой доверия.
+                  recurring-доход от хранения повышает устойчивость модели и снижает зависимость от разовых покупок.
                 </p>
               </div>
             </div>
