@@ -66,6 +66,50 @@ const services = [
   'Консьерж-департамент: трансфер, выездной барбер, химчистка и подготовка гардероба к выходу.',
 ]
 
+const financeHighlights = [
+  {
+    label: 'Ежемесячные расходы',
+    value: '1,08–1,3 млн ₽',
+    body: 'Полный OPEX-конур: команда, материалы, маркетинг, амортизация, резерв и непредвиденные расходы.',
+  },
+  {
+    label: 'Прогнозная выручка',
+    value: '1,5–2,1 млн ₽',
+    body: 'Модель строится на приватном high-ticket формате с управляемой загрузкой и премиальным средним чеком.',
+  },
+  {
+    label: 'Операционный контур',
+    value: '806 тыс. ₽ ФОТ',
+    body: 'Базовая команда из 7 человек уже включает управляющего, банщика, массажиста, администраторов и клининг.',
+  },
+  {
+    label: 'Чистая прибыль',
+    value: '420–800 тыс. ₽',
+    body: 'Диапазон зависит от скорости заполнения, повторяемости визитов и доли дополнительных продаж.',
+  },
+]
+
+const expenseLines = [
+  { label: 'ФОТ с отчислениями', range: '750–850 тыс. ₽', note: 'Основа модели: операционная команда и обязательные начисления.' },
+  { label: 'Расходные материалы', range: '30–50 тыс. ₽', note: 'Парение, уходовые средства, текстиль и сервисный расходник.' },
+  { label: 'Маркетинг', range: '150–200 тыс. ₽', note: 'Локальная премиальная дистрибуция, клубные касания и партнёрские каналы.' },
+  { label: 'Амортизация и прочие расходы', range: '100–150 тыс. ₽', note: 'Амортизация, текущее обслуживание и административный контур.' },
+  { label: 'Непредвиденные расходы', range: '50 тыс. ₽', note: 'Резерв на нестандартные сервисные и технические сценарии.' },
+]
+
+const revenueLines = [
+  { label: 'Аренда банных зон без ритуалов', range: '600–800 тыс. ₽', note: '15–20 тыс. ₽ в час при прогнозной загрузке около 30%.' },
+  { label: 'Аренда банных зон с ритуалами', range: '600–800 тыс. ₽', note: '20–25 тыс. ₽ на человека, premium add-on с высокой маржинальностью.' },
+  { label: 'SPA-услуги', range: '200–300 тыс. ₽', note: 'Массажи, восстановительные протоколы и доп. wellness-пакеты.' },
+  { label: 'Food & beverage', range: '100–200 тыс. ₽', note: 'Гастрономия, напитки и сервисные продажи внутри приватного визита.' },
+]
+
+const operatingNotes = [
+  'Модель не требует массовой загрузки: экономика держится на high-ticket сценарии и управляемом расписании.',
+  'Ключевая финансовая логика строится на комбинации аренды пространства, ритуалов и дополнительных сервисов внутри одного визита.',
+  'Повторяемость визитов и клубная приватность создают устойчивый LTV без давления на объём трафика.',
+]
+
 function reveal(index = 0) {
   return {
     initial: { opacity: 0, y: 26 },
@@ -348,6 +392,110 @@ export default function BathhouseLanding() {
               </p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8 bg-brand-bg px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto max-w-6xl">
+          <motion.div {...reveal()} className="max-w-4xl">
+            <p className="mb-5 flex items-center gap-4 text-sm uppercase tracking-[0.28em] text-brand-gold">
+              <span className="h-px w-10 bg-brand-gold/60" />
+              Executive Finance Section
+            </p>
+            <h2 className="text-4xl leading-tight text-brand-light md:text-6xl">
+              Экономика
+              <span className="block italic font-light text-brand-gold">банного комплекса</span>
+            </h2>
+            <p className="mt-7 max-w-3xl text-base leading-relaxed text-brand-muted md:text-lg">
+              Финансовая модель собрана как investor-facing presentation для приватного recovery asset:
+              умеренная загрузка, высокий средний чек и сервисная глубина формируют устойчивую unit economics
+              без зависимости от массового потока.
+            </p>
+          </motion.div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {financeHighlights.map((item, index) => (
+              <motion.article
+                key={item.label}
+                {...reveal(index)}
+                className="border border-white/10 bg-white/[0.03] p-7"
+              >
+                <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">{item.label}</p>
+                <p className="mt-5 text-4xl leading-none text-brand-light md:text-[2.75rem]">{item.value}</p>
+                <p className="mt-5 text-sm leading-relaxed text-brand-muted md:text-base">{item.body}</p>
+              </motion.article>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-px overflow-hidden border border-white/10 bg-white/10 lg:grid-cols-[1.05fr_0.95fr]">
+            <motion.article {...reveal()} className="bg-brand-onyx/80 p-7 md:p-10">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Расходная модель</p>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-brand-light/86 md:text-lg">
+                Базовый операционный контур строится вокруг сильной команды и premium-grade сервиса.
+                Наибольшая доля расходов приходится на людей, потому что именно персонал удерживает качество,
+                приватность и повторяемость продукта.
+              </p>
+              <div className="mt-8 grid gap-4">
+                {expenseLines.map((item) => (
+                  <div key={item.label} className="border border-white/10 bg-black/20 p-5">
+                    <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
+                      <p className="text-base text-brand-light">{item.label}</p>
+                      <p className="text-lg text-brand-gold">{item.range}</p>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-brand-muted">{item.note}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.article>
+
+            <motion.article {...reveal(1)} className="bg-black/20 p-7 md:p-10">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Структура доходов</p>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-brand-light/86 md:text-lg">
+                Выручка распределена между арендами, ритуалами и допродажами, поэтому объект не зависит от
+                одного-единственного сценария монетизации.
+              </p>
+              <div className="mt-8 grid gap-4">
+                {revenueLines.map((item) => (
+                  <div key={item.label} className="border border-white/10 bg-white/[0.03] p-5">
+                    <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
+                      <p className="text-base text-brand-light">{item.label}</p>
+                      <p className="text-lg text-brand-gold">{item.range}</p>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-brand-muted">{item.note}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.article>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+            <motion.article {...reveal()} className="border border-white/10 bg-black/20 p-7 md:p-10">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Операционная логика</p>
+              <div className="mt-6 grid gap-4">
+                {operatingNotes.map((item, index) => (
+                  <div key={item} className="flex items-start gap-4 border border-white/10 bg-white/[0.02] p-5">
+                    <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center border border-brand-gold/35 text-xs text-brand-gold">
+                      {`0${index + 1}`}
+                    </span>
+                    <p className="text-sm leading-relaxed text-brand-light/82 md:text-base">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.article>
+
+            <motion.article {...reveal(1)} className="border border-brand-gold/15 bg-white/[0.03] p-7 md:p-10">
+              <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">Команда и юнит-экономика</p>
+              <p className="mt-4 text-3xl leading-tight text-brand-light">
+                7 человек в базовом контуре
+                <span className="mt-2 block text-lg italic font-light text-brand-gold">банщик, массажист, два администратора, клининг и управляющий</span>
+              </p>
+              <p className="mt-6 text-sm leading-relaxed text-brand-muted md:text-base">
+                При ФОТ около 806 тыс. ₽ и общей расходной базе 1,08–1,3 млн ₽ проект сохраняет целевой
+                диапазон чистой прибыли 420–800 тыс. ₽ в месяц. Это делает банный комплекс не просто
+                сервисной точкой, а управляемым premium wellness asset с понятной операционной дисциплиной.
+              </p>
+            </motion.article>
+          </div>
         </div>
       </section>
     </>
