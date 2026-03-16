@@ -132,7 +132,7 @@ export default function BathhouseLanding() {
               Strategic Wellness Asset
             </span>
             <h1 className="text-5xl leading-[1.02] text-brand-light md:text-7xl lg:text-[6rem]">
-              Премиальный банный хаб
+              Премиальный банный комплекс
               <span className="mt-3 block italic text-gradient-gold">как инструмент восстановления и приватности</span>
             </h1>
             <p className="mt-8 max-w-3xl text-base leading-relaxed text-brand-light/74 md:text-xl">
