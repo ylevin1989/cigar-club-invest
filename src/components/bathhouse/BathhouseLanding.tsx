@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import {
   Activity,
-  ChevronRight,
   LockKeyhole,
   ShieldCheck,
   Sparkles,
@@ -43,19 +42,16 @@ const packages = [
   {
     name: 'Express Recovery',
     duration: '90 мин',
-    price: '45 000 ₽',
     goal: 'Срочное восстановление когнитивного ресурса перед важной встречей или перелетом.',
   },
   {
     name: 'Strategic Session',
     duration: '3 часа',
-    price: '110 000 ₽',
     goal: 'Глубокое физическое восстановление и приватное пространство для переговоров без внешнего шума.',
   },
   {
     name: 'Absolute Recharge',
     duration: '5 часов',
-    price: '180 000 ₽',
     goal: 'Полная перезагрузка организма, сопоставимая по эффекту с недельным ретритом.',
   },
 ]
@@ -139,21 +135,6 @@ export default function BathhouseLanding() {
               Мы проектируем объект, где баня перестает быть услугой и становится высокотехнологичным
               инструментом защиты частной жизни, когнитивного восстановления и премиального сервиса.
             </p>
-            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#packages"
-                className="inline-flex items-center justify-center gap-3 bg-brand-gold px-7 py-4 text-sm uppercase tracking-[0.24em] text-brand-bg transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                Смотреть формат
-                <ChevronRight size={16} />
-              </a>
-              <a
-                href="#partners"
-                className="inline-flex items-center justify-center border border-brand-gold/30 px-7 py-4 text-sm uppercase tracking-[0.24em] text-brand-light transition-colors duration-300 hover:border-brand-gold hover:text-brand-gold"
-              >
-                Для партнеров
-              </a>
-            </div>
           </motion.div>
 
           <motion.div
@@ -306,7 +287,7 @@ export default function BathhouseLanding() {
               All-Inclusive Model
             </p>
             <h2 className="text-4xl leading-tight text-brand-light md:text-6xl">
-              Фиксированная цена
+              Форматы посещения
               <span className="block italic font-light text-brand-gold">без раздражающих транзакций</span>
             </h2>
           </motion.div>
@@ -321,7 +302,6 @@ export default function BathhouseLanding() {
                 <div>
                   <p className="text-xs uppercase tracking-[0.24em] text-brand-gold">{item.duration}</p>
                   <h3 className="mt-4 text-3xl text-brand-light">{item.name}</h3>
-                  <p className="mt-4 text-5xl text-brand-gold">{item.price}</p>
                   <p className="mt-6 text-sm leading-relaxed text-brand-muted md:text-base">{item.goal}</p>
                 </div>
               </motion.article>

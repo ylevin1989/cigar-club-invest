@@ -15,11 +15,11 @@ export default function PitchContact() {
             className="md:col-span-2 text-center max-w-3xl mx-auto"
           >
             <h2 className="text-3xl md:text-5xl font-serif text-brand-light mb-6">
-              Присоединяйтесь к <span className="italic font-light text-brand-gold">сообществу</span>
+              Приватное <span className="italic font-light text-brand-gold">сообщество</span>
             </h2>
             <div className="space-y-6 text-brand-muted font-light leading-relaxed mb-12">
               <p className="text-xl text-brand-light/90 font-medium">
-                Мы создаем безупречное приватное пространство для отдыха и деловых встреч. Эксклюзивный формат, премиальный сервис и бескомпромиссное качество.
+                Безупречное приватное пространство для отдыха и деловых встреч. Эксклюзивный формат, премиальный сервис и бескомпромиссное качество.
               </p>
               <p>
                 Высокий барьер входа, прямые контракты на поставку редких сигар и статусное окружение гарантируют исключительный уровень клуба. Основной фокус направлен на создание идеальной атмосферы: от прецизионной вентиляции до профессиональной комнаты-хьюмидора.

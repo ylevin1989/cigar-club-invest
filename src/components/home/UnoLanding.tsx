@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import {
-  ArrowRight,
   Crown,
   Landmark,
   MapPin,
@@ -99,21 +98,6 @@ export default function UnoLanding() {
               {' '}
               — новую среду приватного досуга, эстетики и статуса в самом сердце Петербурга.
             </p>
-            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#presentation"
-                className="inline-flex items-center justify-center gap-3 bg-brand-gold px-7 py-4 text-sm uppercase tracking-[0.24em] text-brand-bg transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                Получить презентацию
-                <ArrowRight size={16} />
-              </a>
-              <a
-                href="#heritage"
-                className="inline-flex items-center justify-center border border-brand-gold/30 px-7 py-4 text-sm uppercase tracking-[0.24em] text-brand-light transition-colors duration-300 hover:border-brand-gold hover:text-brand-gold"
-              >
-                Узнать больше
-              </a>
-            </div>
           </motion.div>
 
           <motion.div

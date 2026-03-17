@@ -4,9 +4,9 @@ import { Menu, X } from 'lucide-react'
 
 const links = [
   { to: '/', label: 'Главная' },
-  { to: '/invest', label: 'Сигарный клуб' },
-  { to: '/bathhouse', label: 'Банный комплекс' },
   { to: '/wine-cellar', label: 'Винный погреб' },
+  { to: '/bathhouse', label: 'Банный комплекс' },
+  { to: '/invest', label: 'Сигарный клуб' },
 ]
 
 function linkClass(isActive: boolean) {
