@@ -7,30 +7,6 @@ import {
   Sparkles,
 } from 'lucide-react'
 
-const interiorRooms = [
-  {
-    title: 'Золотая гостиная',
-    subtitle: 'Rococo',
-    image: '/images/mansion/interior-gold.jpg',
-    description:
-      'Пышная лепнина, позолота и зеркала создают пространство для приемов, где интерьер работает как часть сценария.',
-  },
-  {
-    title: 'Мавританская гостиная',
-    subtitle: 'Private salon',
-    image: '/images/mansion/interior-moorish.jpg',
-    description:
-      'Тихий зал с восточным орнаментом для закрытых бесед, камерных встреч и вдумчивого отдыха.',
-  },
-  {
-    title: 'Белый театральный зал',
-    subtitle: 'Ceremonial hall',
-    image: '/images/mansion/interior-theatre.jpg',
-    description:
-      'Просторный зал с историей частных представлений, рассчитанный на события, где важны акустика и впечатление.',
-  },
-]
-
 const locationPoints = [
   {
     icon: MapPin,
@@ -176,48 +152,6 @@ export default function UnoLanding() {
               </div>
             </article>
           </motion.div>
-        </div>
-      </section>
-
-      <section className="border-y border-white/8 bg-brand-onyx px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto max-w-6xl">
-          <motion.div {...reveal()} className="mb-14 max-w-3xl">
-            <p className="mb-5 flex items-center gap-4 text-sm uppercase tracking-[0.28em] text-brand-gold">
-              <span className="h-px w-10 bg-brand-gold/60" />
-              Интерьеры
-            </p>
-            <h2 className="text-4xl leading-tight text-brand-light md:text-6xl">
-              Пространство
-              <span className="block italic font-light text-brand-gold">как искусство</span>
-            </h2>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-brand-muted md:text-lg">
-              Мы сохраняем характер каждого зала и интегрируем современные инженерные системы так, чтобы комфорт
-              не спорил с историей, а подчеркивал её.
-            </p>
-          </motion.div>
-
-          <div className="grid gap-8 lg:grid-cols-3">
-            {interiorRooms.map((room, index) => (
-              <motion.article
-                key={room.title}
-                {...reveal(index)}
-                className="group overflow-hidden border border-white/10 bg-black/20"
-              >
-                <div className="overflow-hidden">
-                  <img
-                    src={room.image}
-                    alt={room.title}
-                    className="h-80 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                  />
-                </div>
-                <div className="space-y-4 p-6 md:p-7">
-                  <p className="text-xs uppercase tracking-[0.28em] text-brand-gold">{room.subtitle}</p>
-                  <h3 className="text-3xl text-brand-light">{room.title}</h3>
-                  <p className="text-sm leading-relaxed text-brand-muted md:text-base">{room.description}</p>
-                </div>
-              </motion.article>
-            ))}
-          </div>
         </div>
       </section>
 
